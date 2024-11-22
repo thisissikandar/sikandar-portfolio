@@ -2,6 +2,7 @@ import { styles } from "../global";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import ComputersCanvas from "../canvas/Computers";
+import { linkedin, githubs, instagram } from "../assets";
 
 const Hero = () => {
   return (
@@ -18,7 +19,7 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915EFF]">Sikandar Chauhan</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <p className={`${styles.heroSubText} mt-2 text-white-100 `}>
             Full Stack Developer
             <Typewriter
               options={{
@@ -31,6 +32,44 @@ const Hero = () => {
               }}
             />
           </p>
+          <div className={`flex my-6 items-center gap-8`}>
+            {/* <a
+          href="https://robinmahto.hashnode.dev/"
+          target="blank"
+          title="hashnode"
+          className="bg-[#915EFF] ease-in duration-200 hover:bg-tertiary p-2 rounded-full"
+        >
+          <img src={hashnode} alt="hashnode" />
+        </a> */}
+            <a
+              href="https://www.linkedin.com/in/sikandar-chauhan/"
+              target="blank"
+              title="linkedin"
+              className="bg-[#915EFF] ease-in duration-200 hover:bg-tertiary p-2 rounded-full"
+            >
+              <img
+                src={linkedin}
+                alt="linkedin"
+                className="cursor-pointer text-white"
+              />
+            </a>
+            <a
+              href="https://github.com/thisissikandar"
+              target="blank"
+              title="github"
+              className="bg-[#915EFF] ease-in duration-200 hover:bg-tertiary  p-2 rounded-full"
+            >
+              <img src={githubs} alt="githubs" />
+            </a>
+            <a
+              href="https://www.instagram.com/thisissikandar/"
+              target="blank"
+              title="instagram"
+              className="bg-[#915EFF] ease-in duration-200 hover:bg-tertiary p-2 rounded-full"
+            >
+              <img src={instagram} alt="instagram" />
+            </a>
+          </div>
         </div>
       </div>
       <ComputersCanvas />

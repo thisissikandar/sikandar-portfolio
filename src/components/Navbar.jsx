@@ -9,6 +9,10 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const toggleResume = () => {
+    const resumeUrl = "https://rxresu.me/sikandarc989/sikandar-kr-chauhan";
+    window.open(resumeUrl);
+  };
   return (
     <nav
       className={`${
@@ -19,7 +23,11 @@ const Navbar = () => {
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2">
-          <img src="./logo.png" alt="logo" className="w-20 h-20 object-contain" />
+          <img
+            src="./logo.png"
+            alt="logo"
+            className="w-20 h-20 object-contain"
+          />
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -34,6 +42,13 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li
+            className={`${
+              active ? "text-white" : "text-secondary"
+            } hover:text-white text-[18px] font-medium cursor-pointer`}
+          >
+            <button onClick={toggleResume}>Resume</button>
+          </li>
         </ul>
 
         <div className="sm:hidden flex flex-row justify-end items-center">
@@ -56,14 +71,21 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
-                  onClick={()=>{
-                    setToggle((toggle)=> !toggle)
-                    setActive(nav.title)
+                  onClick={() => {
+                    setToggle((toggle) => !toggle);
+                    setActive(nav.title);
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li
+               className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                active ? "text-white" : "text-secondary"
+              }`}
+              >
+                <button onClick={toggleResume}>Resume</button>
+              </li>
             </ul>
           </div>
         </div>

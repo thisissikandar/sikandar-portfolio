@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader";
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../components/Loader";
 
 const EarthModel = () => {
   const { scene } = useGLTF(

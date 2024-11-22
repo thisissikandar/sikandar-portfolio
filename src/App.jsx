@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 import "./App.css";
+import StarsCanvas from "./canvas/Stars";
 const Navbar = lazy(() => import("./components/Navbar"));
 const Hero = lazy(() => import("./components/Hero"));
 const About = lazy(() => import("./components/About"));
@@ -27,7 +28,10 @@ const App = () => {
         <Skills />
         <Experience />
         <Projects />
-        <Contact />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
       </div>
     </BrowserRouter>
   );
